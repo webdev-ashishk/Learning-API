@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calling-api-random-data</title>
+  </head>
+  <body>
+    <h1>api call in javascript</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>phone</th>
+          <th>username</th>
+          <th>website</th>
+          <th>email</th>
+          <th>company</th>
+          <th>address</th>
+          <th>id</th>
+        </tr>
+      </thead>
+      <tbody id="userData"></tbody>
+    </table>
+    <script>
+      async function callapi() {
+        let result = await fetch("https://jsonplaceholder.typicode.com/users");
+        result = await result.json();
+        console.warn(result);
+        document.getElementById("userData").innerHTML = result
+          .map(
+            (user) =>
+              `
+            <tr>
+            <td>${user.name}</td>)
+            <td>${user.phone}</td>
+            <td>${user.username}</td>
+            <td>${user.website}</td>
+            <td>${user.email}</td>
+            <td>${user.company}</td>
+            <td>${user.address}</td>
+            <td>${user.id}</td>
+            </tr>
+            `
+          )
+          .join("");
+      }
+      callapi();
+    </script>
+  </body>
+</html>
