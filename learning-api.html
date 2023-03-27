@@ -41,42 +41,50 @@
       const patchBtn = document.getElementById("patch");
       const deconsteBtn = document.getElementById("deconste");
 
-      async function getPosts() {
-        const response = await fetch(url);
-        const posts = await response.json();
-        return posts;
+      async function getposts() {
+        try {
+          const response = await fetch(url);
+          if (response.status != 200) {
+            throw new Error(`Some Error ,status Code: ${response.status}`);
+          }
+          const posts = await response.json();
+          return posts;
+        } catch (error) {
+          console.log(error);
+        }
       }
 
       getBtn.addEventListener("click", async () => {
-        const posts = await getPosts();
+        const posts = await getposts();
         // console.log(posts);
-
-        const table = `
-        <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Title</th>
-    </tr>
-  </thead>
-  <tbody>
-   
-    ${posts
-      //map() A function to be run for each array element.
-      .map(
-        (post) => `
-      <tr>
-      <th scope="row">${post.id}</th>
-      <td>${post.title}</td>
-    </tr>
-      `
-      )
-      .join("\n")}
-    
-  </tbody>
-</table>
-        `;
-        document.querySelector("#table").innerHTML = table;
+        if (posts) {
+          const table = `
+                            <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Title</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      
+                        ${posts
+                          //map() A function to be run for each array element.
+                          .map(
+                            (user) => `
+                          <tr>
+                          <th scope="row">${user.id}</th>
+                          <td>${user.title}</td>
+                        </tr>
+                          `
+                          )
+                          .join("\n")}
+                        
+                      </tbody>
+                    </table>
+                  `;
+          document.querySelector("#table").innerHTML = table;
+        }
       });
     </script>
   </body>
