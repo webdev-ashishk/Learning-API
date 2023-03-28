@@ -59,7 +59,7 @@
         // console.log(posts);
         if (posts) {
           const table = `
-                            <table class="table">
+                      <table class="table">
                       <thead>
                         <tr>
                           <th scope="col">#</th>
@@ -68,10 +68,11 @@
                       </thead>
                       <tbody>
                       
+                        //map() A function to be run for each array element.
                         ${posts
-                          //map() A function to be run for each array element.
                           .map(
                             (user) => `
+                            
                           <tr>
                           <th scope="row">${user.id}</th>
                           <td>${user.title}</td>
