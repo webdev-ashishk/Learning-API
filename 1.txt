@@ -1,0 +1,66 @@
+[
+  {
+    "key": "Ctrl+n",
+    "command": "explorer.newFile"
+  },
+  {
+    "key": "ctrl+v",
+    "command": "editor.action.clipboardPasteAction"
+  },
+  {
+    "key": "shift+insert",
+    "command": "-editor.action.clipboardPasteAction"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "quokka.createJavaScriptFile",
+    "when": "!quokka.isLiveShareClient && !terminalFocus"
+  },
+  {
+    "key": "ctrl+k j",
+    "command": "-quokka.createJavaScriptFile",
+    "when": "!quokka.isLiveShareClient && !terminalFocus"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "quokka.createTypeScriptFile",
+    "when": "!quokka.isLiveShareClient && !terminalFocus"
+  },
+  {
+    "key": "ctrl+k t",
+    "command": "-quokka.createTypeScriptFile",
+    "when": "!quokka.isLiveShareClient && !terminalFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+alt+down",
+    "command": "-editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  // vscode keybindings.json
+  {
+    "command": "vscode-neovim.send",
+    // the key sequence to activate the binding
+    "key": "ctrl+h",
+    // don't activate during insert mode
+    "when": "editorTextFocus && neovim.mode != insert",
+    // the input to send to Neovim
+    "args": "<C-h>"
+  },
+  {
+    "command": "vscode-neovim.compositeEscape1",
+    "key": "j",
+    "when": "neovim.mode == insert && editorTextFocus",
+    "args": "j"
+  },
+  {
+    "command": "vscode-neovim.compositeEscape2",
+    "key": "k",
+    "when": "neovim.mode == insert && editorTextFocus",
+    "args": "k"
+  }
+]

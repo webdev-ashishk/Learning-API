@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fetch</title>
+  </head>
+  <body>
+    <h2 style="text-align: center">fetch-data from url</h2>
+    <script>
+      const url = "https://jsonplaceholder.typicode.com/users";
+      async function callapi() {
+        const promise = await fetch(url);
+        const result = await promise.json();
+        console.log(result);
+        for (const x in result) {
+          // console.log(result[x].name);
+          const print=`${result[x].name}`;
+          document.write(print)
+      }
+
+      callapi();
+    </script>
+  </body>
+</html>
