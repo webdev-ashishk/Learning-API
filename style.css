@@ -73,13 +73,22 @@ p {
   #btn {
     font-size: 1.2rem;
   }
+  span {
+    font-size: 60px;
+  }
 }
 /* all table device */
 @media (min-width: 43em) {
 }
 /* small screen laptops */
 @media (min-width: 62em) {
+  span {
+    font-size: 100px;
+  }
 }
 /* large screen size computer */
 @media (min-width: 87em) {
+  span {
+    font-size: 120px;
+  }
 }
