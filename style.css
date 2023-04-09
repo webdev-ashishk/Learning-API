@@ -76,6 +76,14 @@ p {
   span {
     font-size: 60px;
   }
+  #btn {
+    font-size: 1rem;
+    padding: 8px;
+  }
+  #btnPunch {
+    font-size: 1rem;
+    padding: 5px;
+  }
 }
 /* all table device */
 @media (min-width: 43em) {
@@ -84,6 +92,24 @@ p {
 @media (min-width: 62em) {
   span {
     font-size: 100px;
+  }
+  .container {
+    display: flex;
+    width: 60%;
+  }
+  #para {
+    font-size: 3rem;
+  }
+  #punchline {
+    font-size: 2rem;
+  }
+  #btn {
+    font-size: 2rem;
+    padding: 13px;
+  }
+  #btnPunch {
+    font-size: 1.8rem;
+    padding: 10px;
   }
 }
 /* large screen size computer */
