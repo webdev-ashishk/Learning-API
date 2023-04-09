@@ -5,51 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>random-quote-generator</title>
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-      body {
-        background-color: #00dbde;
-        background-image: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
-      }
-      .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        max-width: 45%;
-        background-color: aliceblue;
-        /* border: 2px solid red;  */
-        /* margin: 10px 0; */
-        text-align: center;
-        border-radius: 10px;
-      }
-      p {
-        color: green;
-        font-size: 1.5rem;
-        margin: 10px;
-      }
-      button {
-        color: #fff;
-        background-color: #262626;
-        font-size: 2rem;
-        border-radius: 10px;
-        /* border: 2px solid blue; */
-        /* margin-bottom: 20px; */
-        margin: 10px;
-      }
-      .container-parent {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        /* box-shadow: 10px 10px 10px red;  */
-        box-shadow: 60px -16px teal;
-      }
-    </style>
+
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container-parent">
@@ -57,12 +14,14 @@
         <div class="img">
           <span style="font-size: 100px">&#128514;</span>
         </div>
-        <div class="quote">
+        <div id="quote">
           <p id="para"></p>
+          <p id="punchline"></p>
         </div>
-        <div class="btn">
+        <div class="btn-parent">
           <button id="btn">next-quote</button>
         </div>
+        <button id="btnPunch">get-punchline</button>
       </div>
     </div>
     <script src="script.js"></script>
