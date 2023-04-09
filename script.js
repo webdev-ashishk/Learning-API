@@ -24,5 +24,6 @@ btnPunch.addEventListener("click", () => {
   // const newPara = document.createElement("p");
   // newPara.textContent = `${result.punchline}`;
   // console.log(newPara);
+  punchline.style.color = "green";
   punchline.innerHTML = `${result.punchline}`;
 });
