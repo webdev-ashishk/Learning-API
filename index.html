@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>get-use-location</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: blue;
+      flex-direction: column;
+      background-color: #08aeea;
+      background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
+    }
+
+    /* CSS */
+    .button-63 {
+      align-items: center;
+      background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+      border: 0;
+      border-radius: 8px;
+      box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+      box-sizing: border-box;
+      color: #ffffff;
+      display: flex;
+      font-family: Phantomsans, sans-serif;
+      font-size: 20px;
+      justify-content: center;
+      line-height: 1em;
+      max-width: 100%;
+      min-width: 140px;
+      padding: 19px 24px;
+      text-decoration: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .button-63:active,
+    .button-63:hover {
+      outline: 0;
+    }
+
+    @media (min-width: 768px) {
+      .button-63 {
+        font-size: 4rem;
+        min-width: 196px;
+      }
+    }
+  </style>
+  <body>
+    <!-- <h1>Get-User-Location</h1> -->
+    <button class="button-63" role="button">Detect Your Location</button>
+  </body>
+  <script>
+    console.log("welcome!");
+    const btn = document.querySelector("button");
+    btn.addEventListener("click", () => {
+      console.log(navigator.geolocation);
+    });
+  </script>
+</html>
